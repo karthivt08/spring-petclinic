@@ -17,7 +17,7 @@ stages {
     stage('Source Code Checkout') {
         
         steps {
-        git branch: main
+        git branch: main,
             url: https://github.com/karthivt08/spring-petclinic.git        
         }                                
     }
