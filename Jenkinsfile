@@ -13,10 +13,10 @@ tools {
     jdk 'JDK17'
 }
 
-stages{
-    stage('Source Code Checkout'){
+stages { 
+    stage('Source Code Checkout') {
         
-    steps{
+    steps {
         git branch: main
             url: https://github.com/karthivt08/spring-petclinic.git
         }
@@ -25,13 +25,13 @@ stages{
 
     stage('MVN Build')
     {
-        steps{
+        steps {
             sh 'mvn package'
         }
     }                            
 stage('report stage')
         {
-            steps{
+            steps {
 
                 archiveArtifacts artifacts: 'target/spring-petclinic*.jar'
                 junit testResults: '**/target/surefire-reports/TEST-*.xml'
