@@ -16,12 +16,11 @@ tools {
 stages { 
     stage('Source Code Checkout') {
         
-    steps {
+        steps {
         git branch: main
-            url: https://github.com/karthivt08/spring-petclinic.git
-        }
-
-                                }
+            url: https://github.com/karthivt08/spring-petclinic.git        
+        }                                
+    }
 
     stage('MVN Build')
     {
@@ -42,4 +41,3 @@ stage('report stage')
     }
 
 }
-
