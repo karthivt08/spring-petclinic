@@ -17,8 +17,8 @@ stages {
     stage('Source Code Checkout') {
         
         steps {
-        git branch: main,
-            url: https://github.com/karthivt08/spring-petclinic.git        
+        git branch: 'main',
+            url: 'https://github.com/karthivt08/spring-petclinic.git '       
         }                                
     }
 
@@ -32,7 +32,7 @@ stage('report stage')
         {
             steps {
 
-                archiveArtifacts artifacts: 'target/spring-petclinic*.jar'
+                archiveArtifacts artifacts: '**/target/spring-petclinic*.jar'
                 junit testResults: '**/target/surefire-reports/TEST-*.xml'
 
             }
