@@ -18,7 +18,8 @@ stages {
         
         steps {
         git branch: 'main',
-            url: 'https://github.com/karthivt08/spring-petclinic.git '       
+            url: 'https://github.com/karthivt08/spring-petclinic.git ',
+            poll: true     
         }                                
     }
 
