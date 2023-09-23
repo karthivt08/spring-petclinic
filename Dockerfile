@@ -1,4 +1,4 @@
-FROM 3-amazoncorretto-17:latest AS builder
+FROM maven:3-amazoncorretto-17 AS builder
 COPY . /spc
 RUN cd /spc && mvn package
 
